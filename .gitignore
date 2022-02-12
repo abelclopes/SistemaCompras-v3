@@ -1,6 +1,5 @@
-
-# Created by https://www.toptal.com/developers/gitignore/api/aspnetcore,dotnetcore
-# Edit at https://www.toptal.com/developers/gitignore?templates=aspnetcore,dotnetcore
+# Created by https://www.toptal.com/developers/gitignore/api/dotnetcore,aspnetcore
+# Edit at https://www.toptal.com/developers/gitignore?templates=dotnetcore,aspnetcore
 
 ### ASPNETCore ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -281,7 +280,7 @@ obj/
 /node_modules
 /wwwroot/node_modules
 
-# End of https://www.toptal.com/developers/gitignore/api/aspnetcore,dotnetcore
+# End of https://www.toptal.com/developers/gitignore/api/dotnetcore,aspnetcore
 tmp.Dockerfile
 **/bin/
 **/obj/
