@@ -294,4 +294,4 @@ tmp.Dockerfile
 .vs/SistemaCompras/v16/.suo
 .vs/SistemaCompras/v16/TestStore/0/testlog.manifest
 **/SistemaCompra.API/SistemaCompra.API.csproj.user
-**/SistemaCompra.API/bin/*
+**/SistemaCompra.*/bin/*
