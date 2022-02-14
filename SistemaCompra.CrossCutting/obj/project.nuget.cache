@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "kcN1C7T0Xw79IdAL7QWxFpAlW0YtZaBgTfND3Xmf2e4g3hOLP4mXD2g9wlhyzeBuSbxiq/VkQNkX1OmBJD8KHg==",
+  "dgSpecHash": "S2rCFqioX1D3kra4xf5oTza0QvOSDe33Opa2WN4sibqnlhbmhAtmV2ePDincOrd+8DkMAwdhDdVtlrfnK3V/dA==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\Prova-Sisprev\\SistemaCompras-v3\\SistemaCompra.CrossCutting\\SistemaCompra.CrossCutting.csproj",
+  "projectFilePath": "E:\\teste-pratico\\SistemaCompras-v3\\SistemaCompra.CrossCutting\\SistemaCompra.CrossCutting.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\rasth\\.nuget\\packages\\mediatr\\8.0.0\\mediatr.8.0.0.nupkg.sha512",
-    "C:\\Users\\rasth\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\rasth\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\abell\\.nuget\\packages\\mediatr\\8.0.0\\mediatr.8.0.0.nupkg.sha512",
+    "C:\\Users\\abell\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\abell\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

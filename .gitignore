@@ -295,3 +295,10 @@ SistemaCompra.API/obj/project.assets.json
 *.cache
 SistemaCompra.*/obj/
 SistemaCompra.*/bin/
+
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
