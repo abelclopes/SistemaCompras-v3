@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace SistemaCompra.Domain.ProdutoAggregate
 {
     public interface IProdutoRepository
     {
+        IList<Produto> ObterProdutos();
         Produto Obter(Guid id);
         void Registrar(Produto entity);
         void Atualizar(Produto entity);

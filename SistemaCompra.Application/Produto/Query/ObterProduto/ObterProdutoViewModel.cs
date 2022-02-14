@@ -6,6 +6,7 @@ namespace SistemaCompra.Application.Produto.Query.ObterProduto
 {
     public class ObterProdutoViewModel
     {
+        public Guid Id { get; set; }
         public int Categoria { get; set; }
         public decimal Preco { get; set; }
         public string Descricao { get; set; }

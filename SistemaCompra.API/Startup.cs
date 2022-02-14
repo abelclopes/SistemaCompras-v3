@@ -12,6 +12,7 @@ using SistemaCompra.Domain.ProdutoAggregate;
 using SistemaCompra.Domain.SolicitacaoCompraAggregate;
 using SistemaCompra.Infra.Data;
 using SistemaCompra.Infra.Data.Produto;
+using SistemaCompra.Infra.Data.SolicitacaoCompra;
 using SistemaCompra.Infra.Data.UoW;
 using System;
 
@@ -35,12 +36,15 @@ namespace SistemaCompra.API
             services.AddSignalR();
 
             services.AddScoped<IProdutoRepository, ProdutoRepository>();
+            services.AddScoped<ISolicitacaoCompraRepository, SolicitacaoCompraRepository>();
+            
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddDbContext<SistemaCompraContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection"), 
+                    Configuration.GetConnectionString("DefaultConnectionSqlDocker"), 
                     o=> o.MigrationsAssembly("SistemaCompra.API"))
+                .EnableSensitiveDataLogging()
             );
 
             services.AddSwaggerGen(c =>
@@ -56,7 +60,7 @@ namespace SistemaCompra.API
             {
                 app.UseDeveloperExceptionPage();
             }
-            
+            app.UseHttpsRedirection();
             app.UseRouting();
 
             app.UseAuthorization();
@@ -71,7 +75,15 @@ namespace SistemaCompra.API
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Prova Sisprev V1");
+                c.RoutePrefix = string.Empty;
             });
+
+            using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetService<SistemaCompraContext>();
+
+                context.Seed();
+            }
         }
     }
 }

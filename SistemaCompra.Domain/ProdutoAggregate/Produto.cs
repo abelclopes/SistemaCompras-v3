@@ -5,9 +5,9 @@ using System;
 
 namespace SistemaCompra.Domain.ProdutoAggregate
 {
-    public class Produto : Entity
+    public class Produto : EntityBase
     {
-        public Categoria Categoria { get; private set; }
+        public Categoria Categoria { get;  private set; }
         public Money Preco { get; private set; }
         public string Descricao { get; private set; }
         public string Nome { get; private set; }

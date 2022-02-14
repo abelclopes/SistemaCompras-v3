@@ -16,6 +16,14 @@ namespace SistemaCompra.API.Produto
             this._mediator = mediator;
         }
 
+        [HttpGet, Route("produto")]
+        public IActionResult ObterProdutos()
+        {
+            var query = new ObterTodosProdutosQuery();
+            var produtoViewModel = _mediator.Send(query);
+            return Ok(produtoViewModel);
+        }
+
         [HttpGet, Route("produto/{id}")]
         public IActionResult Obter(Guid id)
         {

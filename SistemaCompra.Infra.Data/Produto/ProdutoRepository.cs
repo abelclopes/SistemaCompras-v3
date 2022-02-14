@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using ProdutoAgg = SistemaCompra.Domain.ProdutoAggregate;
 
@@ -22,9 +23,13 @@ namespace SistemaCompra.Infra.Data.Produto
             context.Set<ProdutoAgg.Produto>().Remove(entity);
         }
 
+        public IList<ProdutoAgg.Produto> ObterProdutos()
+        {
+            return context.Set<ProdutoAgg.Produto>().ToList();
+        }
         public ProdutoAgg.Produto Obter(Guid id)
         {
-            return context.Set<ProdutoAgg.Produto>().Where(c=> c.Id == id).FirstOrDefault();
+            return context.Set<ProdutoAgg.Produto>().Where(c => c.Id == id).FirstOrDefault();
         }
 
         public void Registrar(ProdutoAgg.Produto entity)

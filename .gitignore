@@ -281,16 +281,17 @@ obj/
 /wwwroot/node_modules
 
 # End of https://www.toptal.com/developers/gitignore/api/dotnetcore,aspnetcore
-tmp.Dockerfile
-**/bin/
-**/obj/
-**/**/bin
-**/obj/*
-**\obj\*
-.gitignore
-.vs/SistemaCompras/DesignTimeBuild/.dtbcache.v2
-.vs/SistemaCompras/DesignTimeBuild/.dtbcache.v2
-.vs/SistemaCompras/v16/.suo
-.vs/SistemaCompras/v16/TestStore/0/testlog.manifest
-**/SistemaCompra.API/SistemaCompra.API.csproj.user
-**/SistemaCompra.*/bin/*
+
+**/bin
+**/obj
+**/**/bin/
+SistemaCompra.API/SistemaCompra.API.csproj.user
+SistemaCompra.API/bin/Debug/netcoreapp3.1/SistemaCompra.API.deps.json
+*.dll
+*.exe
+*.pdb
+*runtimeconfig.*
+SistemaCompra.API/obj/project.assets.json
+*.cache
+SistemaCompra.*/obj/
+SistemaCompra.*/bin/

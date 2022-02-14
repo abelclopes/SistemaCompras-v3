@@ -6,7 +6,7 @@ using System.Text;
 
 namespace SistemaCompra.Domain.SolicitacaoCompraAggregate
 {
-    public class Item : Entity
+    public class Item : EntityBase
     {
         public Produto Produto { get; set; }
         public int Qtde { get; set; }

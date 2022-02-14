@@ -8,13 +8,12 @@ using System.Linq;
 
 namespace SistemaCompra.Domain.SolicitacaoCompraAggregate
 {
-    public class SolicitacaoCompra : Entity
+    public class SolicitacaoCompra : EntityBase
     {
         public UsuarioSolicitante UsuarioSolicitante { get; private set; }
         public NomeFornecedor NomeFornecedor { get; private set; }
         public IList<Item> Itens { get; private set; }
-        public DateTime Data { get; private set; }
-        public Money TotalGeral { get; private set; }
+        public Money TotalGeral { get;  set; }
         public Situacao Situacao { get; private set; }
 
         private SolicitacaoCompra() { }
@@ -24,7 +23,7 @@ namespace SistemaCompra.Domain.SolicitacaoCompraAggregate
             Id = Guid.NewGuid();
             UsuarioSolicitante = new UsuarioSolicitante(usuarioSolicitante);
             NomeFornecedor = new NomeFornecedor(nomeFornecedor);
-            Data = DateTime.Now;
+            DataCriacao = DateTime.Now;
             Situacao = Situacao.Solicitado;
         }
 
@@ -35,7 +34,9 @@ namespace SistemaCompra.Domain.SolicitacaoCompraAggregate
 
         public void RegistrarCompra(IEnumerable<Item> itens)
         {
-           
+            if(itens.Any())
+                foreach (var newItem in itens)
+                    Itens.Add(newItem);
         }
     }
 }

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SistemaCompra.Infra.Data;
 
 namespace SistemaCompra.API.Migrations
 {
     [DbContext(typeof(SistemaCompraContext))]
-    partial class SistemaCompraContextModelSnapshot : ModelSnapshot
+    [Migration("20220212144300_InitialCreate2")]
+    partial class InitialCreate2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -28,17 +30,8 @@ namespace SistemaCompra.API.Migrations
                     b.Property<int>("Categoria")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("DataAtualizacao")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("DataCriacao")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("Descricao")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Excluido")
-                        .HasColumnType("bit");
 
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
